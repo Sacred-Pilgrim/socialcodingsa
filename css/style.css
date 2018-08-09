@@ -19,19 +19,35 @@ body, html {
     color: #000;
 }
 
-.bg .caption .border {
-    background-color: #111;
+.border {
+    background-color: #FF581A;
     color: #fff;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
 }
 
-/**/
+/* Margins util */
 .margin-top-lg {
     margin-top: 80px;
 }
 
+.margin-top-md {
+    margin-top: 40px;
+}
+
+.margin-top-sm {
+    margin-top: 20px;
+}
+
 .margin-bottom-lg {
     margin-bottom: 80px;
+}
+
+.margin-bottom-md {
+    margin-bottom: 40px;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 20px;
 }
