@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body, html {
     height: 100%;
     margin: 0;
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 footer * {
@@ -35,7 +36,7 @@ footer * {
 }
 
 .border {
-    background-color: #FF581A;
+    background-color: #ff851b;
     color: #fff;
     padding: 18px;
     font-size: 25px;
@@ -107,4 +108,19 @@ footer * {
 .thumbnail > img {
     width: 100%;
     margin: auto 0;
+}
+
+/**/
+
+.sc-text-header {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.sc-text {
+    font-size: 20px;
+}
+
+.sc-bg-orange {
+    background-color: #ff851b;
 }
