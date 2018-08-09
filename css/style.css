@@ -26,3 +26,12 @@ body, html {
     font-size: 25px;
     letter-spacing: 10px;
 }
+
+/**/
+.margin-top-lg {
+    margin-top: 80px;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 80px;
+}
