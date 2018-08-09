@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body, html {
+    height: 100%;
+    margin: 0;
+    /*font-family: 'Ubuntu', sans-serif;*/
+}
+
+p {
+    font-size: 20px;
+}
+
+footer * {
+    color: #fff;
+}
+
+/*Background image*/
+.bg {
+    height: 100%;
+    background-size: cover;
+}
+
+.bg-one {
+    background: url('../img/img_bg_1.jpg') no-repeat center;
+}
+
+.bg-two {
+    background: url('../img/img_bg_1.jpg') no-repeat center;
+}
+
+.bg .caption {
+    position: relative;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.border {
+    background-color: #ff851b;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.border-transparent {
+    background-color: transparent
+}
+
+/* Margins util */
+.margin-top-lg {
+    margin-top: 80px;
+}
+
+.margin-top-md {
+    margin-top: 40px;
+}
+
+.margin-top-sm {
+    margin-top: 20px;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 80px;
+}
+
+.margin-bottom-md {
+    margin-bottom: 40px;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 20px;
+}
+
+/* Padding util*/
+
+.padding-top-sm {
+    padding-top: 20px;
+}
+
+.padding-top-md {
+    padding-top: 40px;
+}
+
+.padding-top-lg {
+    padding-top: 80px;
+}
+
+.padding-bottom-sm {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-md {
+    padding-bottom: 40px;
+}
+
+.padding-bottom-lg {
+    padding-bottom: 80px;
+}
+
+/* Thumbnail */
+
+.thumbnail {
+    border: none;
+    padding: 0;
+}
+
+.thumbnail > img {
+    width: 100%;
+    margin: auto 0;
+}
+
+/**/
+
+.sc-text-header {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.sc-text {
+    font-size: 20px;
+}
+
+.sc-bg-orange {
+    background-color: #ff851b;
+}
+
+/* button */
+.btn-extra-lg {
+    padding: 28px 32px 26px;
+    line-height: 30px;
+    font-size: 24px;
+}
