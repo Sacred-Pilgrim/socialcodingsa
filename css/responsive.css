@@ -2,5 +2,6 @@
 @media (max-width: 767px) {
     .border {
         font-size: initial;
+        font-weight: bold;
     }
 }
