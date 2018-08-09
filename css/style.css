@@ -16,18 +16,19 @@ footer * {
 /*Background image*/
 .bg {
     height: 100%;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .bg-one {
-    background: url('../img/img_bg_1.jpg') no-repeat center;
+    background: url('../img/45df099d-080a-4b62-a919-ab94121da8fa.JPG') no-repeat center;
+    background-size: cover;
 }
 
 .bg-two {
     background: url('../img/img_bg_1.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .bg .caption {
