@@ -17,6 +17,9 @@ footer * {
 .bg {
     height: 100%;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg-one {
@@ -28,12 +31,7 @@ footer * {
 }
 
 .bg .caption {
-    position: relative;
-    left: 0;
-    top: 50%;
-    width: 100%;
     text-align: center;
-    color: #000;
 }
 
 .border {

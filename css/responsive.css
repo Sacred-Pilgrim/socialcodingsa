@@ -1,0 +1,6 @@
+/* bs3-xs*/
+@media (max-width: 767px) {
+    .border {
+        font-size: initial;
+    }
+}
