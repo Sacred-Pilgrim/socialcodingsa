@@ -2,6 +2,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    /*font-family: 'Ubuntu', sans-serif;*/
 }
 
 p {
@@ -123,4 +124,11 @@ footer * {
 
 .sc-bg-orange {
     background-color: #ff851b;
+}
+
+/* button */
+.btn-extra-lg {
+    padding: 28px 32px 26px;
+    line-height: 30px;
+    font-size: 24px;
 }
