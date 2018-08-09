@@ -10,12 +10,20 @@ p {
 /*Background image*/
 .bg {
     height: 100%;
-    background: url('../img/img_bg_1.jpg') no-repeat center;
+    overflow-y: scroll;
     background-size: cover;
 }
 
+.bg-one {
+    background: url('../img/img_bg_1.jpg') no-repeat center;
+}
+
+.bg-two {
+    background: url('../img/img_bg_1.jpg') no-repeat center;
+}
+
 .bg .caption {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 50%;
     width: 100%;
@@ -29,6 +37,10 @@ p {
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+}
+
+.border-transparent {
+    background-color: transparent
 }
 
 /* Margins util */
