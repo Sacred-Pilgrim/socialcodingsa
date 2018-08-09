@@ -3,6 +3,10 @@ body, html {
     margin: 0;
 }
 
+p {
+    font-size: 18px;
+}
+
 /*Background image*/
 .bg {
     height: 100%;
@@ -76,4 +80,16 @@ body, html {
 
 .padding-bottom-lg {
     padding-bottom: 80px;
+}
+
+/* Thumbnail */
+
+.thumbnail {
+    border: none;
+    padding: 0;
+}
+
+.thumbnail > img {
+    width: 100%;
+    margin: auto 0;
 }
