@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu|Didact+Gothic|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Poppins:200,300');
 body, html {
     margin: 0;
     color: #222222;
@@ -11,10 +11,12 @@ h2 {
 
 h3 {
     font-size: 21px;
+    font-weight: 200;
 }
 
 p {
     font-size: 20px;
+    font-weight: 200;
 }
 
 footer * {
@@ -183,9 +185,6 @@ section .container:after {
     background-color: #ff851b;
 }
 
-.hero hr {
-    background-color: #ff851b;
-}
 
 .section-header > h1 {
     color: #ff851b;
