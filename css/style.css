@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Didact+Gothic');
 body, html {
     margin: 0;
+    color: #222222;
 }
 
 p {
@@ -136,6 +137,10 @@ footer * {
     min-height: 80px;
 }
 
+.navbar-top .navbar-header button {
+    margin-top: 20px;
+}
+
 .navbar-top .navbar-brand {
     margin-top: 15px;
     font-size: 26px;
@@ -150,7 +155,31 @@ footer * {
     color: #eee;
 }
 
+.navbar-bottom {
+    background-color: #be3030;
+}
+
 
 .container .jumbotron{
     border-radius: 0px;
+}
+
+.hero {
+    padding: 160px 0;
+    background-color: #eeeeee;
+}
+
+.hero .container:after {
+    height: 5px;
+    width: 25%;
+    background-color: #ff851b;
+}
+
+.hero hr {
+    background-color: #ff851b;
+    height: 5px;
+}
+
+section {
+    padding-top: 80px;
 }
