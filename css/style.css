@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     color: #222222;
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 h2 {
@@ -37,12 +38,20 @@ footer * {
 }
 
 .bg-two {
-    background: url('../img/IMG_0479.JPG') no-repeat center;
+    background: url('../img/7537447696_IMG_5678.JPG') no-repeat center;
+    background-size: cover;
+}
+
+.bg-three {
+    background: url('../img/7589969136_IMG_5711.JPG') no-repeat center ;
     background-size: cover;
 }
 
 .bg .caption {
     text-align: center;
+    background-color: #22222287;
+    padding: 20px;
+    border: 2px solid #ff851b;
 }
 
 .bg .caption p {
