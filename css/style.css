@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu|Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Didact+Gothic|Poppins');
 body, html {
     margin: 0;
     color: #222222;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 21px;
 }
 
 p {
@@ -32,6 +41,11 @@ footer * {
 
 .bg .caption {
     text-align: center;
+}
+
+.bg .caption p {
+    font-size: 33px;
+    line-height: 1.25em;
 }
 
 .border {
@@ -104,11 +118,6 @@ footer * {
     padding: 0;
 }
 
-.thumbnail > img {
-    width: 100%;
-    margin: auto 0;
-}
-
 /**/
 
 .sc-text-header {
@@ -165,21 +174,33 @@ footer * {
 }
 
 .hero {
-    padding: 160px 0;
-    background-color: #eeeeee;
+    padding: 80px 0;
 }
 
-.hero .container:after {
-    height: 5px;
-    width: 25%;
+section .container:after {
+    height: 1px;
+    width: 100%;
     background-color: #ff851b;
 }
 
 .hero hr {
     background-color: #ff851b;
-    height: 5px;
 }
 
-section {
-    padding-top: 80px;
+.section-header > h1 {
+    color: #ff851b;
+}
+
+footer .nav a:hover {
+    background-color: #eeeeee;
+}
+
+footer .nav a:hover i {
+    color: #ff7100;
+}
+
+.footer-line:before {
+    height: 1px;
+    width: 100%;
+    background-color: #eee;
 }
