@@ -49,9 +49,9 @@ footer * {
 
 .bg .caption {
     text-align: center;
-    background-color: #22222287;
+    /*background-color: #22222287;*/
     padding: 20px;
-    border: 2px solid #ff851b;
+    /*border: 2px solid #ff851b;*/
 }
 
 .bg .caption p {
