@@ -39,11 +39,15 @@ footer * {
 .bg-one {
     background: url('../img/45df099d-080a-4b62-a919-ab94121da8fa.JPG') no-repeat center;
     background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #2222228a;
 }
 
 .bg-two {
     background: url('../img/7537447696_IMG_5678.JPG') no-repeat center;
     background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #2222228a;
 }
 
 .bg-three {
@@ -157,35 +161,47 @@ footer * {
 
 /*navbar*/
 .navbar-top {
-    font-family: 'Didact Gothic', sans-serif;
-    min-height: 80px;
+    background-color: transparent;
+    border: none;
+    transition: background-color 200ms,
+                color 200ms,
+                border 200ms;
 }
 
-.navbar-top .navbar-header button {
-    margin-top: 20px;
+.navbar-top .navbar-brand, .navbar-top .navbar-brand:hover {
+    color: #fff;
 }
 
-.navbar-top .navbar-brand {
-    margin-top: 15px;
-    font-size: 26px;
+.navbar-top .navbar-nav > li > a {
+    color: #fff;
 }
 
-.navbar-top .navbar-right {
-    margin-top: 15px;
-    font-size: 24px;
-}
-
-.navbar-top .navbar-right > ul > li > a {
-    color: #eee;
+.navbar-top .navbar-nav > li > a:hover {
+    color: #a2a2a2;
 }
 
 .navbar-bottom {
     background-color: #be3030;
 }
 
+.navbar-scroll {
+    background-color: #fff;
+    border-color: #e7e7e7;
+    transition: background-color 200ms,
+                color 200ms,
+                border 200ms;
+}
 
-.container .jumbotron{
-    border-radius: 0px;
+.navbar-scroll .navbar-brand, .navbar-top .navbar-brand:hover {
+    color: #a2a2a2;
+}
+
+.navbar-scroll .navbar-nav > li > a {
+    color: #a2a2a2;
+}
+
+.navbar-scroll .navbar-nav > li > a:hover {
+    color: #222222;
 }
 
 .hero {
@@ -203,8 +219,13 @@ section .container:after {
     color: #ff851b;
 }
 
+footer .nav a {
+    padding: 10px;
+}
+
 footer .nav a:hover {
-    background-color: #eeeeee;
+    background-color: #fff;
+    border-bottom: 3px solid #eee;
 }
 
 footer .nav a:hover i {
