@@ -1,6 +1,8 @@
 /* bs3-xs*/
 @media (max-width: 767px) {
-    .border {
-        font-size: initial;
+    .btn-extra-lg {
+        padding: 20px 24px 16px;
+        line-height: 16px;
+        font-size: 16px;
     }
 }
