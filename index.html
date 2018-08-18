@@ -258,14 +258,21 @@
                 <div class="col-md-4">
                     <h1>Subscribe</h1>
                     <p>Receive news and updates from Social Coding</p>
-                    <form>
+                    <div id="myApp" v-cloak>
+                        <div v-bind:class="[alert.type, 'alert']" v-if="alert.show">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ alert.message }}
+                        </div>
                         <div class="form-group">
-                            <input type="email" class="form-control input-lg" placeholder="Email">
+                            <input type="text" class="form-control input-lg" placeholder="Name" v-model.trim="userName" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control input-lg" placeholder="Email" v-model.trim="userEmail" required>
                         </div>
                         <div class="margin-top-sm">
-                            <input type="button" class="btn btn-lg btn-success btn-block" value="SIGN UP">
+                            <button class="btn btn-lg btn-success btn-block" v-on:click="subscribeNewsletter()">SIGN UP</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <h1>Stay Connected</h1>
@@ -288,6 +295,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <!--todo use production version of VueJs-->
 
     <script>
         $(document).scroll(function () {
@@ -296,6 +305,60 @@
            } else {
                $('.navbar').removeClass('navbar-scroll').addClass('navbar-top');
            }
+        });
+
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                alert: {
+                    message: '',
+                    type: '',
+                    show: false
+                },
+                userEmail: '',
+                userName: ''
+            },
+            methods: {
+                validateEmail: function (email) {
+                    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    return regex.test(email);
+                },
+                subscribeNewsletter: function () {
+                    var that = this;
+
+                    if (that.validateEmail(that.userEmail) && that.userName.length > 0) {
+                        $.ajax({
+                            url: '/signUp.php',
+                            type: 'POST',
+                            data: {
+                                'userName': that.userName,
+                                'userEmail': that.userEmail
+                            }
+                        }).done(function (res) {
+                            console.log(res);
+                            that.userName = that.userEmail = '';
+
+                            that.alert = {
+                                show: true,
+                                type: 'alert-info',
+                                message: res
+                            }
+                        }).fail(function (xhr) {
+                            that.alert = {
+                                show: true,
+                                type: 'alert-danger',
+                                message: xhr
+                            }
+                        })
+                    } else {
+                        that.alert = {
+                            show: true,
+                            type: 'alert-danger',
+                            message: 'Please fill the form in with valid information'
+                        }
+                    }
+                }
+            }
         });
     </script>
 
