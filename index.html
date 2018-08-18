@@ -270,7 +270,7 @@
                             <input type="email" class="form-control input-lg" placeholder="Email" v-model.trim="userEmail" required>
                         </div>
                         <div class="margin-top-sm">
-                            <button class="btn btn-lg btn-success btn-block" v-on:click="subscribeNewsletter()">SIGN UP</button>
+                            <button v-bind:class="[{'disabled': loading},'btn btn-lg btn-success btn-block']" v-on:click="subscribeNewsletter()">SIGN UP</button>
                         </div>
                     </div>
                 </div>
@@ -295,8 +295,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <!--todo use production version of VueJs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
 
     <script>
         $(document).scroll(function () {
@@ -315,6 +314,7 @@
                     type: '',
                     show: false
                 },
+                loading: false,
                 userEmail: '',
                 userName: ''
             },
@@ -327,6 +327,7 @@
                     var that = this;
 
                     if (that.validateEmail(that.userEmail) && that.userName.length > 0) {
+                        that.loading = true;
                         $.ajax({
                             url: '/signUp.php',
                             type: 'POST',
@@ -349,6 +350,8 @@
                                 type: 'alert-danger',
                                 message: xhr
                             }
+                        }).always(function () {
+                            that.loading = false;
                         })
                     } else {
                         that.alert = {
